@@ -1,0 +1,3 @@
+#!/bin/bash
+echo hello
+touch /home/terraform/file1
