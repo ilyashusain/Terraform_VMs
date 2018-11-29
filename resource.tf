@@ -1,9 +1,8 @@
 resource "google_compute_instance" "default" {
-	name = "${var.name}-${count.index+1}"
+	name = "${var.name}"
 	machine_type = "${var.machine_type}"
 	zone = "europe-west2-c"
 	tags = ["jenkins"]
-	count = 1
 	boot_disk {
 		initialize_params {
 			image = "${var.image}"
