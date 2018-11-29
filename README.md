@@ -27,9 +27,19 @@ This file contains our variables. When we look at the provider.tf or resource.tf
 This contains our firewall rules. Please see the default_variables.tf files to check the value of the inputs.
 
 ```name``` This is the name of the network.
+
 ```network``` This is the actual network.
+
 ```target_tags``` Tags for the network
+
 ```source_ranges``` 0.0.0.0/0 i.e. the default.
+
 ```allow``` The allowed ports.
 
-## 
+## jenkins_centos7
+
+This is a script for installing jenkins on to our vms.
+
+## provider.tf
+
+This is what authenticates terraform with our Google cloud account. Without it, we would not be able to spin up vms. As we can see when we look inside the file, google is our provider, and it connects to our google cloud account since we made a services account with a gcpkey.json, which terraform uses to authenticate with the service.
