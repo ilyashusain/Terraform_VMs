@@ -65,3 +65,15 @@ This configures our vm to what we specify. Let's take a look at its individual c
 ```connection``` Uses the private key to unencrypt the secure shell transaction, establishing connection.
 
 ```provisioner``` This is a critical component of the code. The provisioner allows us to run shell commands on the vm. In this case, we are installing java and wget, installing jenkins with the jenkins_centos7 script, and running a script that touches a file on the system.
+
+## script_1
+
+This script touches a file on the vm.
+
+## terraform.tfstate
+
+Terraform stores information about your infrustructure configurations. It does this through the terraform.tfstate file.
+
+## terraform.tfstate.backup
+
+This provides a backup for your terraform file. If you wish to revert to a previous state, you can do so because of this file.
