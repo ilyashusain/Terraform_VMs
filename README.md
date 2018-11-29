@@ -49,11 +49,19 @@ This is what authenticates terraform with our Google cloud account. Without it, 
 This configures our vm to what we specify. Let's take a look at its individual components:
 
 ```name``` This assigns a name to our vm.
+
 ```machine type``` This sets the type of machine we want e.g. f1-micro.
+
 ```zone``` This specifies the zone where our vm will be spun up.
+
 ```tags``` Specifies fiewall tags for our vm.
+
 ```boot disk``` Specifies which operating system the vm will run on e.g. centos7.
+
 ```network interface``` This adds our vm to the default network.
+
 ```metadata``` Creates a user on the vm. As we can see, the hosts public key are tranfered to this user, allowing secure shell access.
+
 ```connection``` Uses the private key to unencrypt the secure shell transaction, establishing connection.
+
 ```provisioner``` This is a critical component of the code. The provisioner allows us to run shell commands on the vm. In this case, we are installing java and wget, installing jenkins with the jenkins_centos7 script, and running a script that touches a file on the system.
