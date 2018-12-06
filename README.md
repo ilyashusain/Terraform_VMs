@@ -4,6 +4,10 @@ Terraform is excellent for the automation of vm creation. We first create a serv
 
 Let us go through each file, outlining what each file does.
 
+## Preliminaries
+
+We must initialize terraform by running ```terraform init``` in our terraform directory. We can then create the specified virtual machines by running ```terraform apply```, enter ```yes``` on the prompt.
+
 ## Terraform.makefile
 
 This contains commands that allows the host to run shortened version of otherwise long and cumbersome commands. These .makefiles are very useful when desiring quality of life tweaks to your code.
